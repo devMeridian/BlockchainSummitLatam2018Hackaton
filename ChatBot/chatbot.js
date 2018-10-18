@@ -1,13 +1,13 @@
 const Telegraf = require('telegraf')
 const Telegram = require('telegraf/telegram')
 
-var Web3 = require('web3');
+// var Web3 = require('web3');
 
 const bot = new Telegraf("537420063:AAGOls9AjwY2emUTwx3RttcKtgbzCy5P6BU")
 const telegram = new Telegram("537420063:AAGOls9AjwY2emUTwx3RttcKtgbzCy5P6BU")
 
 // set your web3 object
-var web3 = new Web3();
+//var web3 = new Web3();
 
 chatId = 0
 
@@ -33,9 +33,8 @@ bot.on('sticker', (ctx) => ctx.reply('👍'))
 
 bot.startPolling()
 
-
+/*
 // set the web3 object local blockchain node
-//web3.setProvider(new web3.providers.HttpProvider('ws://localhost:8545'));
 web3.setProvider(new web3.providers.WebsocketProvider('ws://localhost:8546'));
 // log some web3 object values to make sure we're all connected
 console.log(web3.version.api);
@@ -76,3 +75,4 @@ var event = trace.events.Temp( {}, function(error, result) {
 })
 .on('error', console.error);
 
+*/
