@@ -10,7 +10,7 @@ const telegram = new Telegram("537420063:AAGOls9AjwY2emUTwx3RttcKtgbzCy5P6BU");
 var web3 = new Web3();
 
 web3.setProvider(
-  new web3.providers.WebsocketProvider("ws://kovan.infura.io/v3/ws")
+  new web3.providers.WebsocketProvider("ws://kovan.infura.io/ws")
 );
 
 // const EthereumTx = require('ethereumjs-tx')
