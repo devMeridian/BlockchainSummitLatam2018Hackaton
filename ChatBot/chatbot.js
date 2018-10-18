@@ -3,8 +3,8 @@ const Telegram = require('telegraf/telegram')
 
 var Web3 = require('web3');
 
-const bot = new Telegraf(process.env.BOT_TOKEN)
-const telegram = new Telegram(process.env.BOT_TOKEN)
+const bot = new Telegraf("537420063:AAGOls9AjwY2emUTwx3RttcKtgbzCy5P6BU")
+const telegram = new Telegram("537420063:AAGOls9AjwY2emUTwx3RttcKtgbzCy5P6BU")
 
 // set your web3 object
 var web3 = new Web3();
