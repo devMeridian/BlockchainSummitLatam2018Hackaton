@@ -73,7 +73,7 @@ var ABI = [
     type: "function"
   }
 ];
-var trace_contract = "0xa158a29c89a948e7bbb0c4929f836560a8a46373";
+var trace_contract = "0xaa4f57eeb8c7c4d49701b51a00eb7a641f36c8ce";
 
 // now retrieve your contract object with the ABI and contract address values
 var trace = new web3.eth.Contract(ABI, trace_contract);
