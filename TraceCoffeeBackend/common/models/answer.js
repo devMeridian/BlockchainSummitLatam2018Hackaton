@@ -30,7 +30,7 @@ var ABI = [
         type: "bool"
       }
     ],
-    name: "SupplyProgress",
+    name: "SupplyProgressUpdated",
     type: "event"
   },
   {
