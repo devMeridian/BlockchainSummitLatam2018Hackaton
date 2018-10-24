@@ -56,7 +56,7 @@ var ABI = [
         type: "bool"
       }
     ],
-    name: "SupplyProgress",
+    name: "SupplyProgressUpdated",
     type: "event"
   },
   {
@@ -81,7 +81,7 @@ var trace = new web3.eth.Contract(ABI, address);
 
 // indefinite recursive loop to read the 'ItBlinks' event in the blink contract.
 var event = trace.events
-  .SupplyProgress({}, function(error, result) {
+  .SupplyProgressUpdated({}, function(error, result) {
     if (error) {
       console.log(error);
     } else {

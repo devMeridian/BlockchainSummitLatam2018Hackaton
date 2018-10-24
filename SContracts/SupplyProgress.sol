@@ -25,13 +25,13 @@ contract SupplyProgress is DSMath {
     event Paid(address _address, uint amount);
 
 
-    event Supply(bool successful);
+    event SupplyProgressUpdated(bool successful);
 
     constructor() public {}
 
     function setSucceeded(bool successful) public {
         require(dai.transfer(msg.sender, 1));
-        emit Supply(successful);
+        emit SupplyProgressUpdated(successful);
     }
 
 
