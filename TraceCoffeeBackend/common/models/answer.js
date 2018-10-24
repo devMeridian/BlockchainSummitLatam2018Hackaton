@@ -3,8 +3,10 @@
 var Web3 = require("web3");
 
 var web3 = new Web3();
-web3.setProvider(
-  new web3.providers.WebsocketProvider("ws://kovan.infura.io/v3/ws")
+var web3Http = new Web3(
+    new Web3.providers.HttpProvider(
+        "https://kovan.infura.io/v3/66139c047af248c58d3a61576cb5d476"
+    )
 );
 
 const EthereumTx = require("ethereumjs-tx");
@@ -30,7 +32,7 @@ var ABI = [
         type: "bool"
       }
     ],
-    name: "SupplyProgressUpdated",
+    name: "SupplyProgress",
     type: "event"
   },
   {
@@ -51,8 +53,8 @@ var ABI = [
 
 async function callContract(hasSucceeded) {
   var address = "0xac133e2580dbbabcbdc8266a8702a5df25a4e934";
-  var count = web3.eth.getTransactionCount(address_origin);
-  var trace_contract = new web3.eth.Contract(ABI, address);
+  var count = await web3Http.eth.getTransactionCount(address_origin);
+  var trace_contract = web3Http.eth.Contract(ABI, address);
 
   let data = trace_contract.methods.setSucceeded(hasSucceeded).encodeABI();
   // .send({ from: "0x082376777B71F3897b68552C759d8f09D9DD1a1C" });
@@ -69,7 +71,7 @@ async function callContract(hasSucceeded) {
   const tx = new EthereumTx(txParams);
   tx.sign(privateKey);
   const serializedTx = tx.serialize();
-  web3.sendSignedTransaction("0x" + serializedTx.toString("hex"));
+  web3Http.eth.sendSignedTransaction("0x" + serializedTx.toString("hex"));
 
   console.log("contract sent");
 }
