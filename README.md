@@ -4,12 +4,11 @@
 
 The Meridian Group team decided participate in the Blockchain Summit Latam 2018 Bogotá Hackathon by focusing on the MakerDAO challenge, working on a solution to the problem of generating automatic and reliable payments along different steps of the coffee supply chain. To accomplish this we extended components of the Trace.Coffee traceability platform with smart contracts to store Dai funds and to trigger payments to players in the coffee trade as coffee moves along the production process and supply chain.
 
-### Authors: 
-Santiago Araujo
-Camilo Soto
-Alejandro Medina
-Rafael Saavedra
-** Meridian Group SAS, Bogotá, Colombia**
+### Authors: ** Meridian Group SAS, Bogotá, Colombia**
+* Santiago Araujo
+* Camilo Soto
+* Alejandro Medina
+* Rafael Saavedra
 
 ### The problem: 
 In the process of buying coffee there is a trust issue between the buyers and the producers. Producers need capital to finance the harvests but the buyers are not willing to pay until they have received the product. This is because buyers need to make sure that at the end of the process the coffee is delivered and that it has the expected quality. Producers run the risk of not receiving the agreed payment when the product is ready because it may not meet the expectations of the buyers or because the buyers are not trustworthy (fraud intention).
