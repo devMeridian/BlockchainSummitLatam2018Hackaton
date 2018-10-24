@@ -32,4 +32,12 @@ To solve this problem we proposed a mechanism based on the Dai cryptocurrency an
 The code in this repository is organized in the following folders:
 * **SContracts**: contains the smart contracts code in Solidity.
 * **TraceCoffeeBackend**: contains the source files belonging to the traceability platform's back-end which were modified for this project. The Trace.Coffee back-end is a server based on the LoopBack Node.js API framework. Only the javascript file containing the code that gets called when a new update comes from the mobile app is included here, in order to illustrate the connection between the process update mechanism and the smart contract.
-* **ChatBot**: contains the code for the Telegram chatbot.
+* **ChatBot**: contains the code for the Telegram chatbot. It implements a simple chatbot which subscribes to the smart contract event and, according to the "success" status included in the event parameters, it sends one of two possible messages.
+
+### Development State
+At the end of the hackathon all the components were interacting and working for a single process step with hard-coded conditions verified in the back-end. This works well as a proof of concept, but requires additional work in order to be suitable for practical applications. Among other follow up tasks we suggest:
+
+* Make the current implementation more solid.
+* Create a buyers user interface (web or mobile app) for finding coffees and starting the purchase and provisionning process.
+* Add support for multiple supply chain validation steps, with configurable conditions each.
+* Define mechanisms for making payments to more than one agent in the supply chain, besides the coffee producer (miller, logistics operator, roaster, etc.).
