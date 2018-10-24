@@ -23,4 +23,4 @@ To solve this problem we proposed a mechanism based on the Dai cryptocurrency an
 8. The key data is stored in the blockchain.
 9. Steps 3 to 8 are repeated for each coffee production stage until the process is finished, the product is delivered to the buyer and the producer (and potentially other agents in the coffee supply chain) receives the final payment automatically.
 
-![Automatic payment process image](./Trace.Coffee-Components.jpg "Automatic Payment Process")
+![Automatic payment process image](./Auto-payments.jpg "Automatic Payment Process")
